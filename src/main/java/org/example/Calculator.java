@@ -7,6 +7,7 @@ public class Calculator {
 
     private int secondNumber;
 
+
     // Add two numbers
     public int add_numbers(int firstNum, int secondNum) {
         int result = firstNum + secondNum;
@@ -31,7 +32,9 @@ public class Calculator {
     public int divide_numbers(int firstNum, int secondNum) {
         if (secondNum == 0) {
             System.out.println("Cannot divide by zero");
+            return 0;
         }
         return firstNum / secondNum;
     }
+
 }
