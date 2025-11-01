@@ -8,8 +8,8 @@ public class MainApp {
             Scanner scan = new Scanner(System.in);
             String ans = "Y";
 
-            // continues loop until answer is anything but a yes
-            while (ans.equalsIgnoreCase("Y")) {
+            // loops until the user enters N
+            while (!ans.equalsIgnoreCase("N")) {
                 //get operation from user
                 System.out.println("Please enter an operation (add, subtract, multiply, divide)");
                 String operation = scan.next();
@@ -22,14 +22,14 @@ public class MainApp {
                 int secondNum = scan.nextInt();
 
                 //Adding in calculator class
-                Calculator calculator = new Calculator();
+                Calculator calc = new Calculator();
 
                 //Apply operation
                 int result = switch (operation) {
-                    case "add" -> calculator.add_numbers(firstNum, secondNum);
-                    case "subtract" -> calculator.subtract_numbers(firstNum, secondNum);
-                    case "multiply" -> calculator.multiply_numbers(firstNum, secondNum);
-                    case "divide" -> calculator.divide_numbers(firstNum, secondNum);
+                    case "add" -> calc.add_numbers(firstNum, secondNum);
+                    case "subtract" -> calc.subtract_numbers(firstNum, secondNum);
+                    case "multiply" -> calc.multiply_numbers(firstNum, secondNum);
+                    case "divide" -> calc.divide_numbers(firstNum, secondNum);
                     default -> 0;
                 };
 
