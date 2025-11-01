@@ -11,7 +11,7 @@ public class MainApp {
             // loops until the user enters N
             while (!ans.equalsIgnoreCase("N")) {
                 //get operation from user
-                System.out.println("Please enter an operation (add, subtract, multiply, divide)");
+                System.out.println("Please enter an operation (add, subtract, multiply, divide, power, modulus):");
                 String operation = scan.next();
                 System.out.println(operation);
 
@@ -30,6 +30,8 @@ public class MainApp {
                     case "subtract" -> calc.subtract_numbers(firstNum, secondNum);
                     case "multiply" -> calc.multiply_numbers(firstNum, secondNum);
                     case "divide" -> calc.divide_numbers(firstNum, secondNum);
+                    case "power" -> calc.power_numbers(firstNum, secondNum);
+                    case "modulus" -> calc.modulus_numbers(firstNum, secondNum);
                     default -> 0;
                 };
 

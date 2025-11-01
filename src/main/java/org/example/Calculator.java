@@ -37,4 +37,16 @@ public class Calculator {
         return firstNum / secondNum;
     }
 
+    // Power of two numbers
+    public int power_numbers(int firstNum, int secondNum) {
+        int result = (int) Math.pow(firstNum, secondNum);
+        return result;
+    }
+
+    // Modulus of two numbers
+    public int modulus_numbers(int firstNum, int secondNum) {
+        int result = firstNum % secondNum;
+        return result;
+    }
+
 }
